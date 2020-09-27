@@ -4,6 +4,30 @@
 
 <title>UPLIGHT: 小型全周囲プロジェクションディスプレイを搭載した次世代の携帯ゲームデバイス</title>
 
+<meta property="og:url" content="https://uplight.ml/">
+<meta property="og:title" content="UPLIGHT: 小型全周囲プロジェクションディスプレイを搭載した次世代の携帯ゲームデバイス">
+<meta property="og:image" content="https://uplight.ml/static/image/uplight_header.jpg">
+<meta property="og:description" content="全周囲ディスプレイを搭載した新しい携帯型ゲーム機”UPLIGHT”による、これまでにないゲーム体験">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+<script src="/static/js/jquery-3.4.1.min.js"></script>
+<script src="/static/js/lazyload.min.js"></script>
+
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+<script src="/static/js/bootstrap.min.js"></script>
+
+<!-- YouTube Embed Player -->
+<script>
+  // Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142141187-1"></script>
 <script>
@@ -14,25 +38,12 @@
   gtag('config', 'UA-142141187-1');
 </script>
 
-<link rel="stylesheet" href="/static/css/style.css">
 
-<script src="/static/js/jquery-3.4.1.min.js"></script>
-<script src="/static/js/lazyload.min.js"></script>
-
-<link rel="stylesheet" href="/static/css/bootstrap.min.css">
-<script src="/static/js/bootstrap.min.js"></script>
-
-<meta property="og:url" content="https://uplight.ml/">
-<meta property="og:title" content="UPLIGHT: 小型全周囲プロジェクションディスプレイを搭載した次世代の携帯ゲームデバイス">
-<meta property="og:image" content="https://uplight.ml/static/image/uplight-top_ogp.png">
-<meta property="og:description" content="我々は今回、全周囲ディスプレイを搭載した新しい携帯型ゲーム機”UPLIGHT”による、これまでにないゲーム体験を提案する。">
-
-<meta name="twitter:card" content="summary_large_image">
 
 <header class="uplight-header">
   <div class="uplight-header-background">
     <div class="full-image-box">
-      <img class="lazyload" src="/static/image/uplight-top_x320.png" data-src="/static/image/uplight-top.png">
+      <img class="lazyload" src="/static/image/uplight_header_x540.jpg" data-src="/static/image/uplight_header.jpg">
     </div>
 <!--
     <div class="responsive-iframe-box">
@@ -51,6 +62,15 @@
     <div class="uplight-header-title">
       <h1 class="uplight-title">UPLIGHT</h1>
       <h2 class="uplight-subtitle">小型全周囲プロジェクションディスプレイを搭載した次世代の携帯ゲームデバイス</h2>
+
+      <div class="m-4 d-flex justify-content-end">
+        <div style="width: 128px; margin: 1rem;">
+          <img src="/static/image/sown2019_finalist.png" class="content-thumbnail">
+        </div>
+        <div style="width: 128px; margin: 1rem;">
+          <img src="/static/image/sown2019_techaward.png" class="content-thumbnail">
+        </div>
+      </div>
     </div>
 
     <div class="uplight-header-link">
@@ -81,13 +101,7 @@
       <div class="col-12">
         <h2 id="pv" class="uplight-heading">PV</h2>
         <div class="responsive-iframe-box">
-          <iframe
-            src="https://www.youtube.com/embed/Mbvaex9uz70?showinfo=0&rel=0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen=""
-            frameborder="0"
-            >
-          </iframe>
+          <div id="pv_player"></div>
         </div>
       </div>
     </div>
@@ -96,7 +110,7 @@
       <div class="col-12">
         <h2 id="concept" class="uplight-heading">Concept</h2>
         <p>
-          我々は今回、全周囲ディスプレイを搭載した新しい携帯型ゲーム機”UPLIGHT”による、これまでにないゲーム体験を提案する。
+          我々は、全周囲ディスプレイを搭載した新しい携帯型ゲーム機”UPLIGHT”による、これまでにないゲーム体験を提案する。
 
         <p>
           立方体や半球などの立体構造物の全周囲にプロジェクションマッピングなどを用いて映像を表示させたものを全周囲ディスプレイという。映像が360°連続的に表示可能で、投影された立体形状にも直接手で触れることができるため、映像をより立体的に実感できる長所がある。
@@ -129,10 +143,10 @@
         <h3 class="uplight-heading">Omni-Directional</h3>
       </div>
 
-      <div class="col-12 col-md-6 p-2">
-        <img src="/static/image/uplight_view.jpg" class="content-thumbnail">
-      </div>
-      <div class="col-12 col-md-6 p-2">
+      <img src="/static/image/uplight_view.jpg" class="content-thumbnail col-6 col-lg-3 p-1">
+      <img src="/static/image/uplight_view_2.jpg" class="content-thumbnail col-6 col-lg-3 p-1">
+
+      <div class="col-12 col-lg-6 p-2">
         <p class="pt-2">
           UPLIGHTはプレイヤーから見えない部分にも映像を映し出す、全周囲ディスプレイを搭載したゲーム機である。
 
@@ -140,26 +154,29 @@
           プレイヤーは見えない部分を見に行くため、上半身を動かして覗き込んだり、UPLIGHT自体をひっくり返して見ることになる。
       </div>
 
+
       <div class="col-12 mt-2">
         <h3 class="uplight-heading">Replacable</h3>
-
-        <p class="pt-2">
-          UPLIGHTの全周囲ディスプレイは手軽に取り換えることができ、その性質を活かした従来にないゲーム表現が可能である。
-
-        <p>
-          立方体形状、半球形状、円柱形状や正四面体形状など様々な形状のディスプレイを交換することで、更に遊びの幅を広げることができる。
-
       </div>
 
-      <div class="col-12 col-md-6 p-2">
+      <div class="col-6 col-lg-3 p-2">
         <h4 class="uplight-heading">Cube</h4>
         <img src="/static/image/uplight_cube.jpg" class="content-thumbnail">
       </div>
 
-      <div class="col-12 col-md-6 p-2">
+      <div class="col-6 col-lg-3 p-2">
         <h4 class="uplight-heading">Dome</h4>
         <img src="/static/image/uplight_dome.jpg" class="content-thumbnail">
       </div>
+
+      <div class="col-12 col-lg-6 p-2">
+        <p class="pt-2">
+          UPLIGHTの全周囲ディスプレイは簡単に取り換えることができ、その性質を活かした従来にないゲーム表現が可能である。
+
+        <p>
+          立方体形状、半球形状、円柱形状や正四面体形状など様々な形状のディスプレイを交換することで、更に遊びの幅を広げることができる。
+      </div>
+
 
       <div class="col-12 mt-2">
         <h3 class="uplight-heading">Rotatable</h3>
@@ -172,7 +189,7 @@
 
     <div class="row mx-2 mx-md-0">
       <div class="col-12 col-lg-6 p-2 order-1 order-lg-1">
-        <h4 class="uplight-heading">手動回転</h4>
+        <h4 class="uplight-heading">Hand Rotating</h4>
         <p>
           UPLIGHTの立体全周囲ディスプレイは手で持って回転させることができる。これにより、プレイヤーは細かい角度の制御を行うことができる。
 
@@ -182,19 +199,13 @@
 
       <div class="col-12 col-lg-6 p-2 order-2 order-lg-3">
           <div class="responsive-iframe-box">
-            <iframe
-              src="https://www.youtube.com/embed/fy-Fh3M-nUY?showinfo=0&rel=0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""
-              frameborder="0"
-              >
-            </iframe>
+            <div id="hand_rotate_player"></div>
           </div>
 
       </div>
 
       <div class="col-12 col-lg-6 p-2 order-3 order-lg-2">
-        <h4 class="uplight-heading">自動回転</h4>
+        <h4 class="uplight-heading">Auto Rotating</h4>
         <p>
           UPLIGHTの左右のコントローラには、それぞれ回転を制御するためのトリガーが1つずつ存在する。これにより、左右への自動回転を制御することができる。
 
@@ -204,13 +215,7 @@
       </div>
       <div class="col-12 col-lg-6 p-2 order-4 order-lg-4">
         <div class="responsive-iframe-box">
-          <iframe
-            src="https://www.youtube.com/embed/DBkWqhwiaEE?showinfo=0&rel=0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen=""
-            frameborder="0"
-            >
-          </iframe>
+          <div id="auto_rotate_player"></div>
         </div>
       </div>
 
@@ -223,7 +228,7 @@
 
       <div class="col-12 col-md-6 p-2">
         <p>
-          <img src="/static/image/uplight_360speaker.png" class="content-thumbnail">
+          <img src="/static/image/uplight_speaker.jpg" class="content-thumbnail">
       </div>
 
       <div class="col-12 col-md-6 p-2">
@@ -244,7 +249,7 @@
 
       <div class="col-12 col-md-6 p-2">
         <p>
-          <img src="/static/image/uplight_topview.jpg" class="content-thumbnail">
+          <img src="/static/image/uplight_controller.jpg" class="content-thumbnail">
       </div>
 
       <div class="col-12 col-md-6 p-2">
@@ -259,20 +264,29 @@
         <h2 id="contents" class="uplight-heading">Contents</h2>
       </div>
 
+
       <div class="col-12 mt-4">
         <h4 class="uplight-heading">Breakout Game</h4>
       </div>
-      <div class="col-12 col-md-6 p-2">
+
+      <div class="col-6 col-lg-3 p-2">
         <img src="/static/image/uplight_breakout.png" class="content-thumbnail">
       </div>
 
-      <div class="col-12 col-md-6 p-2">
-        <p>従来のブロック崩しは、画面上を反射しながら移動するボールを、画面下部に落ちないように、バーを左右に操作して打ち返し、並べられたブロックを崩していくものである。
+      <div class="col-6 col-lg-3 p-2">
+        <img src="/static/image/uplight_breakout_2.jpg" class="content-thumbnail">
+      </div>
 
-        <p>しかし、UPLIGHT上で展開されるブロック崩しは従来のものとは異なり、ボールはディスプレイの立体形状に沿う軌道を描く。
+      <div class="col-12 col-lg-6 p-2">
+        <p>
+          従来のブロック崩しは、画面上を反射しながら移動するボールを、画面下部に落ちないように、バーを左右に操作して打ち返し、並べられたブロックを崩していくものである。
+
+        <p>
+          しかし、UPLIGHT上で展開されるブロック崩しは従来のものとは異なり、ボールはディスプレイの立体形状に沿う軌道を描く。
         このため、これまで平面で遊んでいたプレイヤーは予想の斜め上をいくゲームを体験することになる。
 
-        <p>また、ディスプレイの形状を取り換えることでボールの軌道が変わり、プレイヤーは形状毎に異なる体験が可能である。
+        <p>
+          また、ディスプレイの形状を取り換えることでボールの軌道が変わり、プレイヤーは形状毎に異なる体験が可能である。
 
       </div>
 
@@ -280,14 +294,22 @@
       <div class="col-12 mt-4">
         <h4 class="uplight-heading">Side-Scrolling Action Game</h4>
       </div>
-      <div class="col-12 col-md-6 p-2">
+
+      <div class="col-6 col-lg-3 p-2">
         <img src="/static/image/uplight_neighbor.png" class="content-thumbnail">
       </div>
 
-      <div class="col-12 col-md-6 p-2">
-        <p>ステージが立方体ディスプレイ上で連続的に繋がり、キャラクタは隣り合う側面の間を行き来することができる。
+      <div class="col-6 col-lg-3 p-2">
+        <img src="/static/image/uplight_view_2.jpg" class="content-thumbnail">
+      </div>
 
-        <p>プレイヤーはディスプレイを回転させながら、見えないステージにいるキャラクタやギミックを見に行くアクションを通して、UPLIGHTが提唱する「隠れた部分を見に行く」動作の持つ高いエンタテインメント性を体験できる。
+      <div class="col-12 col-lg-6 p-2">
+        <p>
+          ステージが立方体ディスプレイ上で連続的に繋がり、キャラクタは隣り合う側面の間を行き来することができる。
+
+        <p>
+          プレイヤーはディスプレイを回転させながら、見えないステージにいるキャラクタやギミックを見に行くアクションを通して、UPLIGHTが提唱する「隠れた部分を見に行く」動作の持つ高いエンタテインメント性を体験できる。
+
       </div>
 
     </div>
@@ -336,4 +358,68 @@
 <script>
   /* Start lazyloading */
   lazyload();
+</script>
+
+<script>
+  let pvPlayer = null;
+  let handRotatePlayer = null;
+  let autoRotatePlayer = null;
+
+  function loadYouTubeEmbed(elementId, videoId) {
+    return new YT.Player(elementId, {
+      'videoId': videoId,
+      'playerVars': {
+        'autoplay': 0,
+        'controls': 1,
+        'showinfo': 0,
+        'rel': 0,
+        'modestbranding': 1,
+        'loop': 1,
+        'fs': 1,
+        'autohide': 1,
+      },
+      'events': {
+        'onReady': (e) => {
+          e.target.mute();
+        },
+      },
+    });
+  }
+
+  // Automatically called
+  function onYouTubePlayerAPIReady() {
+    pvPlayer = loadYouTubeEmbed('pv_player', 'Mbvaex9uz70');
+    handRotatePlayer = loadYouTubeEmbed('hand_rotate_player', 'fy-Fh3M-nUY');
+    autoRotatePlayer = loadYouTubeEmbed('auto_rotate_player', 'DBkWqhwiaEE');
+
+    onScrolledOrLoaded();
+  }
+
+  function inView(element) {
+    let viewHeight = document.documentElement.clientHeight;
+    let videoRect = element.getBoundingClientRect();
+    let videoTop = videoRect.top;
+    let videoBottom = videoRect.bottom;
+
+    return 0 <= videoTop && videoBottom <= viewHeight;
+  }
+  function playWhenInView(player) {
+    if (player && player.getPlayerState) {
+      if (inView(player.getIframe())) {
+        player.playVideo();
+      }
+      else {
+        player.pauseVideo();
+      }
+    }
+  }
+  function onScrolledOrLoaded() {
+    playWhenInView(pvPlayer);
+    playWhenInView(handRotatePlayer);
+    playWhenInView(autoRotatePlayer);
+  }
+
+  document.addEventListener('load', onScrolledOrLoaded);
+  document.addEventListener('scroll', onScrolledOrLoaded);
+
 </script>
